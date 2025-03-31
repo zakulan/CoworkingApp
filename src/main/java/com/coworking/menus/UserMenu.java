@@ -34,7 +34,7 @@ public class UserMenu {
             System.out.println("5. Return to main menu");
             System.out.print("Select an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -76,7 +76,7 @@ public class UserMenu {
         browseSpaces();
         System.out.print("Enter the space ID you want to book: ");
         Long spaceId = scanner.nextLong();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         Optional<CoworkingSpace> spaceOpt = spaceService.getSpaceById(spaceId);
         if (spaceOpt.isEmpty()) {

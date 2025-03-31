@@ -28,7 +28,7 @@ public class AdminMenu {
             System.out.println("5. Return to main menu");
             System.out.print("Select an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -59,7 +59,7 @@ public class AdminMenu {
         String type = scanner.nextLine();
         System.out.print("Enter price per hour: ");
         double price = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         CoworkingSpace space = new CoworkingSpace(id, type, price);
         spaceService.addSpace(space);
@@ -69,7 +69,7 @@ public class AdminMenu {
     private void removeSpace() {
         System.out.print("Enter space ID to remove: ");
         Long id = scanner.nextLong();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         spaceService.removeSpace(id);
         System.out.println("Space " + id + " removed successfully!");
     }
